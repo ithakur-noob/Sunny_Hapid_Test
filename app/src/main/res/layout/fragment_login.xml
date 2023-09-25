@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_layer"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/rlToolbar"
+            layout="@layout/item_toolbar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/enter_your_mobile_number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="34sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/hello_welcome_back_to_our_account"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll">
+
+        <LinearLayout
+            android:id="@+id/llFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edit_text_bg_8dp"
+            android:gravity="center"
+            android:paddingHorizontal="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/flag" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/etPhone"
+            style="@style/AppTheme.DefaultEditText"
+            android:layout_width="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/phone_hint"
+            android:inputType="number"
+            android:letterSpacing="0.8"
+            android:maxLength="10"
+            android:paddingHorizontal="14dp"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/llFlag"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnRequestOtp"
+            style="@style/AppTheme.DefaultButton"
+            android:layout_marginTop="20dp"
+            android:text="@string/request_otp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etPhone" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlLoginLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnRequestOtp">
+
+            <View
+                android:id="@+id/line_above_login"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:background="#ECE6E6" />
+
+
+            <TextView
+                android:id="@+id/login_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingHorizontal="14dp"
+                android:text="@string/login_with"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <LinearLayout
+            android:id="@+id/llGoogle"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/rounded_edit_text_bg_8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rlLoginLabel">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/google" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llFacebook"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_edit_text_bg_8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/rlLoginLabel">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fb" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTermConditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="@string/terms"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llGoogle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

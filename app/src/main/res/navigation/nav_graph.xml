@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentGetStarted">
+
+    <fragment
+        android:id="@+id/fragmentGetStarted"
+        android:name="com.sunnyhapidtest.fragments.GetStartedFragment"
+        android:label="GetStarted"
+        tools:layout="@layout/fragment_get_started">
+
+        <action
+            android:id="@+id/navigate_to_login"
+            app:destination="@id/fragmentLogin"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.sunnyhapidtest.fragments.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+
+        <action
+            android:id="@+id/navigate_to_verificationCode"
+            app:destination="@id/fragmentVerificationCode"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="phone"
+                app:argType="string" />
+        </action>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentVerificationCode"
+        android:name="com.sunnyhapidtest.fragments.VerificationCodeFragment"
+        android:label="VerificationCode"
+        tools:layout="@layout/fragment_verification_code">
+        <action
+            android:id="@+id/navigate_to_createProfile"
+            app:destination="@id/fragmentCreateProfile"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="phone"
+                app:argType="string" />
+
+        </action>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmentCreateProfile"
+        android:name="com.sunnyhapidtest.fragments.CreateProfileFragment"
+        android:label="CreateProfile"
+        tools:layout="@layout/fragment_create_profile"/>
+
+</navigation>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SunnyHapidTest</string>
+    <string name="find_nearest_nlocal_market">Find Nearest Local\nMarket</string>
+    <string name="info"><![CDATA[O On-Time Departures. Pay just for your seat. No Refusal from our end. Spacious & Comfortable Seating. Female passengers safety standards. Onboard Refreshments. Cab Tracking through\nMaps]]></string>
+    <string name="get_started">Get Started</string>
+    <string name="backarrow">backArrow</string>
+    <string name="best_markitplac">Best Markitplac</string>
+    <string name="enter_your_mobile_number">Enter Your Mobile Number</string>
+    <string name="hello_welcome_back_to_our_account">Hello, Welcome Back To Our Account</string>
+    <string name="phone_hint">00000 00000</string>
+    <string name="request_otp">Request OTP</string>
+    <string name="login_with">Login With</string>
+    <string name="terms"><![CDATA[By Creating Passcode You Agree With Yur\nTerms & Conditions And Privacy Policy]]></string>
+    <string name="confirmation_otp">Your Confirmation Code is\nBelow — Enter It And We\'ll Help\nYou Get Signed In.</string>
+    <string name="submit">Submit</string>
+    <string name="don_t_receive_otp_resend">Don\'t Receive OTP? Resend</string>
+    <string name="enter_your_verification_code">Enter your Verification code</string>
+    <string name="we_have_sent_the_code_verification_to_your_mobile_number">We Have Sent The Code Verification To Your Mobile Number</string>
+<string name="create_profile">Create Profile</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone">Phone</string>
+    <string name="pick_your_current_location">Pick Your Current Location</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="select_postal_code_or_address">Select Postal Code Or Address</string>
+    <string name="cancel">Cancel</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="splashlogo">splashLogo</string>
+</resources>
